@@ -18,7 +18,6 @@ $ cd lab1
 ```
 ```bash
 $ git init
->>>>>>> first_branch
 ```
 
 ## Subtask 2
