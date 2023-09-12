@@ -1,3 +1,26 @@
+# Tasks: Mastering Git
+
+Tasks on knowledge and skills of working with Git (basic commands)
+
+## Subtask 1
+
+1.1 Initialize a repository
+
+1.2 Create a new directory.
+
+1.3 Initialize a new repository in the created directory.
+
+```bash
+$ mkdir lab1
+```
+```bash
+$ cd lab1
+```
+```bash
+$ git init
+>>>>>>> first_branch
+```
+
 ## Subtask 2
 
 2. Create a project with an empty file README.md (or README.rst if you prefer)
@@ -55,4 +78,58 @@ $ git commit -m "Init"
 ```
 ```bash
 $ git push origin main
+```
+
+## Subtask 4
+
+4.Switch back to the master branch and modify README.md
+
+4.1 Switch back to the master branch.
+
+4.2 Modify the README.md: add a list of console commands to solve the 2nd subtask.
+
+4.3 Commit all changes.
+
+4.4 Display the project history
+
+```bash
+$ git checkout main
+
+```
+```bash
+$ nano README.md
+
+```
+```bash
+$ git add .
+
+```
+```bash
+$ git commit -m "modified README.md in /lab1/main/"
+
+```
+```bash
+$ git push origin main
+
+```
+```bash
+$ git log --all
+commit 990114ebe8b003e51f681db1fc4cb6abb573c989 (HEAD -> main, origin/main)
+Author: VladBaroko <dk12.brovko@lll.kpi.ua>
+Date:   Tue Sep 12 14:41:33 2023 +0300
+
+    modified README.md in /lab1/main/
+
+commit 42ab2245dbe7ad32210357e140ccc44a3287216d (origin/first_branch, first_branch)
+Author: VladBaroko <dk12.brovko@lll.kpi.ua>
+Date:   Tue Sep 12 14:29:53 2023 +0300
+
+    modified README.md
+
+commit c4a4957f6b6b6d3ded2ef46608b3c639f4dc380b
+Author: VladBaroko <dk12.brovko@lll.kpi.ua>
+Date:   Tue Sep 12 13:40:03 2023 +0300
+
+    Init
+
 ```
