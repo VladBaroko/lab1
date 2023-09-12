@@ -4,11 +4,11 @@ Tasks on knowledge and skills of working with Git (basic commands)
 
 ## Subtask 1
 
-1.1 Initialize a repository
+1. Initialize a repository
 
-1.2 Create a new directory.
+1.1 Create a new directory.
 
-1.3 Initialize a new repository in the created directory.
+1.2 Initialize a new repository in the created directory.
 
 ```bash
 $ mkdir lab1
@@ -80,9 +80,57 @@ $ git commit -m "Init"
 $ git push origin main
 ```
 
+## Subtask 3
+
+3. Create a new branch and modify README.md
+
+3.1 Create a new branch named first_branch and switch to it.
+
+3.2 Modify the README.md: add a list of console commands to solve the 1st subtask.
+
+3.3 Display the state of the working directory and the staging area.
+
+3.4 Commit all changes.
+
+```bash
+$ git checkout -b first_branch
+```
+```bash
+$ nano README.md
+
+# one of the best graphical editor 
+# Here you can add a list of console commands to solve the 1st subtask.
+```
+```bash
+$ git worktree list
+D:/unik/3kurs/PIPka/lab1  c4a4957 [first_branch]
+```
+```bash
+$ git status
+On branch first_branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+```
+```bash
+$ git add .
+
+```
+```bash
+$ git commit -m "modified README.md"
+```
+```bash
+$ git push origin first_branch
+
+```
+
 ## Subtask 4
 
-4.Switch back to the master branch and modify README.md
+4. Switch back to the master branch and modify README.md
 
 4.1 Switch back to the master branch.
 
@@ -132,4 +180,14 @@ Date:   Tue Sep 12 13:40:03 2023 +0300
 
     Init
 
+```
+
+## Project history
+
+```bash
+$ git log --oneline --decorate
+47436e5 (HEAD -> main, origin/main) modified README.md
+990114e modified README.md in /lab1/main/
+42ab224 (origin/first_branch, first_branch) modified README.md
+c4a4957 Init
 ```
